@@ -1,6 +1,6 @@
 {
   "mastodon_server": "https://journa.host",
-  "posting_enabled": false,
+  "posting_enabled": true,
   "check_limit": 20,
   "feeds": [
     {
