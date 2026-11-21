@@ -1,0 +1,43 @@
+name: Goldman Mill - Curated RSS to Mastodon
+
+on:
+  schedule:
+    - cron: '11,41 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: goldman-mill-curated-rss
+  cancel-in-progress: false
+
+jobs:
+  check-feeds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Check curated feeds
+        env:
+          MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
+        run: python rss_to_mastodon.py
+      - name: Save article history even after partial errors
+        if: always()
+        shell: bash
+        run: |
+          if [ -f posted_state.json ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add posted_state.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record curated feed items [skip ci]"
+              git push
+            fi
+          fi
