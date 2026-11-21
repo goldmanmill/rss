@@ -1,10 +1,10 @@
 {
-  "mastodon_server": "https://YOUR-MASTODON-SERVER.example",
+  "mastodon_server": "https://journa.host/@MillMessenger",
   "posting_enabled": false,
   "check_limit": 20,
   "feeds": [
     {
-      "name": "My first curated source",
+      "name": "The_Progressive",
       "url": "http://progressive.org/api/rss/content.rss",
       "hashtags": ["#Peace", "vsn", "#GoldmanMill", "DiverseSpectrumOfTheLeft", "SupportIndependentMedia", "progressive", "left", "PeaceEducation"],
       "include_any": [],
