@@ -10,6 +10,22 @@
       "include_any": [],
       "exclude_any": [],
       "attach_image": false
-    }
+    },
+{
+  "name": "UPI Top News",
+  "url": "https://rss.upi.com/news/top_news.rss",
+  "hashtags": ["#UPI", "#WorldNews", "vsn", "#GoldmanMill", "SupportIndependentMedia"],
+  "include_any": [],
+  "exclude_any": [],
+  "attach_image": false
+},
+{
+  "name": "One Green Planet",
+  "url": "http://www.onegreenplanet.org/feed/",
+  "hashtags": ["#garden", "#WorldNews", "EnvironmentNews", "vsn", "#GoldmanMill", "environment", "green"],
+  "include_any": [],
+  "exclude_any": [],
+  "attach_image": false
+}
   ]
 }
