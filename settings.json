@@ -1,5 +1,5 @@
 {
-  "mastodon_server": "https://journa.host/@MillMessenger",
+  "mastodon_server": "https://journa.host",
   "posting_enabled": false,
   "check_limit": 20,
   "feeds": [
