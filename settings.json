@@ -5,8 +5,8 @@
   "feeds": [
     {
       "name": "My first curated source",
-      "url": "https://YOUR-RSS-FEED.example/feed",
-      "hashtags": ["#Peace", "#GoldmanMill"],
+      "url": "http://progressive.org/api/rss/content.rss",
+      "hashtags": ["#Peace", "vsn", "#GoldmanMill", "DiverseSpectrumOfTheLeft", "SupportIndependentMedia", "progressive", "left", "PeaceEducation"],
       "include_any": [],
       "exclude_any": [],
       "attach_image": false
