@@ -1,0 +1,15 @@
+{
+  "mastodon_server": "https://YOUR-MASTODON-SERVER.example",
+  "posting_enabled": false,
+  "check_limit": 20,
+  "feeds": [
+    {
+      "name": "My first curated source",
+      "url": "https://YOUR-RSS-FEED.example/feed",
+      "hashtags": ["#Peace", "#GoldmanMill"],
+      "include_any": [],
+      "exclude_any": [],
+      "attach_image": false
+    }
+  ]
+}
